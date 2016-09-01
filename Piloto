@@ -1,0 +1,6 @@
+public class Piloto implements Comparable {
+  String numCar, driver, team, laps, timeOrRetired gridPos;
+  int pts;
+  
+  
+}
