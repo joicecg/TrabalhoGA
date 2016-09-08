@@ -2,7 +2,7 @@ public class Piloto implements Comparable {
   String numCar, driver, team, laps, timeOrRetired gridPos;
   int pts;
   
-  public String getNumCar() {
+  	public String getNumCar() {
 		return numCar;
 	}
 	public void setNumCar(String numCar) {
