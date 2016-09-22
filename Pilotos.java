@@ -13,7 +13,7 @@ public class Provas {
 				pilotos[i] = piloto;
 				return;
 			}
-		System.err.println("Não há vagas no array!");
+		System.out.println("Não há vagas no array!");
 	}
 
 	public void classificarPilotos() {
