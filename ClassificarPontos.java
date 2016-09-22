@@ -1,8 +1,8 @@
 package AndersonDaSilvaCossulJoyceCazanoskiGomesTrabGA;
 
-public class ClassificarPontos implements Comparator { 
+public class ClassificarPontos implements Comparator<Piloto> { 
 	@Override
-	public int compare(Object piloto1, Object piloto2) {
-		return ((Piloto)piloto1).getPontos() - ((Piloto)piloto2).getPontos(); //retorna valor negativo caso p1 tiver menos pontos
+	public int compare(Piloto piloto1, Piloto piloto2) {
+		return piloto1.getPts() - piloto2.getPts(); //retorna valor negativo caso p1 tiver menos pontos
 	}
 }
