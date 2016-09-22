@@ -42,7 +42,7 @@ public class Temporada2013 {
 		try{
 			FileWriter fw = new FileWriter(filename);
 			PrintWriter out = new PrintWriter(fw);
-			out.println("Fórmula 1" + "\nTemporada 2013\n Nome do pilto - Equipe - Pontuação");
+			out.println("FÃ³rmula 1" + "\nTemporada 2013\n Nome do pilto - Equipe - PontuaÃ§Ã£o");
 			
 			for(int i = 0; i < last; i++)
 				out.println(pilotos[i].getDriver() + " - " + pilotos[i].getTeam() + " - " + pilotos[i].getPts()+"\n");
@@ -50,7 +50,7 @@ public class Temporada2013 {
 			out.close();
 			
 		}catch(IOException e){
-			System.out.println("Erro ao escrever arquivo");
+			System.out.println("Erro ao gerar arquivo");
 			e.printStackTrace();
 		}
 		
