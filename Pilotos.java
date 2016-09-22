@@ -17,6 +17,6 @@ public class Provas {
 	}
 
 	public void classificarPilotos() {
-		Array.sort(pilotos);
+		Arrays.sort(pilotos);
 	}
 }
