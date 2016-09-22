@@ -1,8 +1,8 @@
 package AndersonDaSilvaCossulJoyceCazanoskiGomesTrabGA;
 
-public class ClassificarNome implements Comparator {
+public class ClassificarNome implements Comparator<Piloto> {
 	@Override
-	public int compare(Object piloto1, Object piloto2) {
-		return ((Piloto)piloto1).getNome().compareTo(((Piloto)piloto2).getNome());
+	public int compare(Piloto piloto1, Piloto piloto2) {
+		return piloto1.getDriver().compareTo(piloto2.getDriver());
 	}
 }
