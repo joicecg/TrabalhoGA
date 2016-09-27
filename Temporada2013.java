@@ -10,19 +10,24 @@ public class Temporada2013 {
 	protected Piloto[] pilotos;
 	protected int last = 0;
 	
-	public void inserePilotosPont(Piloto p){		
-		int pos = -1;
-		for(int i = 0; i < last; i++)
-			if(pilotos[i].getDriver() == p.getDriver()){
-				pilotos[i].setPts(p.getPts());
-				pos = i;
+	public static boolean pilotoPontuou(Piloto p){
+		if(p.getPts() == 0)
+			return false;
+		return true;
+	}
+	
+	public void inserePilotosPont(Piloto p){	
+		if(p!=null && pilotoPontuou(p)==true){
+			for(int i = 0; i < last; i++)
+				if(pilotos[i].getDriver() == p.getDriver())
+					pilotos[i].setPts(p.getPts());
+				
+				else{
+					pilotos[last].setDriver(p.getDriver());
+					pilotos[last].setTeam(p.getTeam());
+					pilotos[last].setPts(p.getPts());
+					last++;
 			}
-			
-		if(pos == -1 && p.getPts()!= 0){
-			pilotos[last].setDriver(p.getDriver());
-			pilotos[last].setTeam(p.getTeam());
-			pilotos[last].setPts(p.getPts());
-			last++;
 		}
 		
 	}
