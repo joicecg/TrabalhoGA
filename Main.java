@@ -42,15 +42,15 @@ public class Main {
 		
 		} catch(FileNotFoundException e) {
 			JOptionPane.showMessageDialog(null, 
-										  "Arquivo " + e.getMessage() + " não encontrado!",
-										  "ERRO",
-										  JOptionPane.ERROR_MESSAGE);
+						     "Arquivo " + e.getMessage() + " não encontrado!",
+					             "ERRO",
+						     JOptionPane.ERROR_MESSAGE);
 						
 		} catch(IOException e) {
 			JOptionPane.showMessageDialog(null, 
-										  "Um erro ocorreu!\n" + e.getMessage(),
-										  "ERRO",
-										  JOptionPane.ERROR_MESSAGE);
+						      "Um erro ocorreu!\n" + e.getMessage(),
+						      "ERRO",
+						      JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	
