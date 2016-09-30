@@ -17,7 +17,13 @@ public class Main {
 		try {
 			File diretorioProvas = new File("Temporada2013");		
 			File[] arquivosNaPasta = diretorioProvas.listFiles();
-			
+			if(arquivosNaPasta == null) {
+				JOptionPane.showMessageDialog(null,
+							      "Nenhum arquivo foi encontrado!",
+							      "ERRO",
+							      JOptionPane.ERROR_MESSAGE);
+				return;
+			}
 			ArrayList<Provas> provas = new ArrayList<>(); //para salvar todas provas
 			
 			Temporada2013 temp2013 = new Temporada2013(NUM_PILOTOS_TEMP_2013);
