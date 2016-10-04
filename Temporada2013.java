@@ -57,7 +57,7 @@ public class Temporada2013 {
 		try {
 			FileWriter fw = new FileWriter(fileName);
 			PrintWriter out = new PrintWriter(fw);
-			out.println("Fórmula 1" + "\nTemporada 2013\n Nome do pilto - Equipe - Pontuação\n");
+			out.println("Fórmula 1" + "\nTemporada 2013\n Nome do piloto - Equipe - Pontuação\n");
 			
 			for(int i = 0; i < pilotos.length; i++) {
 				if(pilotos[i] == null) {
