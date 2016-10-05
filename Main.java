@@ -38,7 +38,9 @@ public class Main {
 			int op = escolha();
 			switch(op){
 				case 1:
-					temp2013.ordenaPorNome();
+					if(temp2013.pilotos != null)
+						temp2013.ordenaPorNome();
+					break;
 					
 				case 2:
 					temp2013.ordenaPorPts();

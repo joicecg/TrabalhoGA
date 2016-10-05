@@ -1,4 +1,4 @@
-package AndersonDaSilvaCossulJoyceCazanoskiGomesTrabGA;
+package JoiceAndersonTrabGA;
 
 import java.util.Arrays;
 

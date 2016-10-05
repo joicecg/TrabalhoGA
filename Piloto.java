@@ -1,4 +1,4 @@
-package AndersonDaSilvaCossulJoyceCazanoskiGomesTrabGA;
+package JoiceAndersonTrabGA;
 
 public class Piloto implements Comparable<Piloto> {
 	private String numCar;
@@ -24,17 +24,8 @@ public class Piloto implements Comparable<Piloto> {
 	}
 
 	public int compareTo(Piloto o) {
-		final int BEFORE = -1;
-	    final int EQUAL = 0;
-	    final int AFTER = 1;
-	    
-	    if(this.getPts() <  o.getPts())
-	    	return BEFORE;
-	    
-	    else if(this.getPts() == o.getPts())
-	    	return EQUAL;
-	    
-	    else return AFTER;
+		return this.driver.compareTo(o.driver);
+		
 	}
 	
 	//DAQUI EM DIANTE SÓ MÉTODOS DE ACESSO
