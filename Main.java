@@ -51,7 +51,7 @@ public class Main {
 						break;
 						
 					default:
-						System.err.println("Você não inseriu um valor válido!\n");					
+						System.err.println("\nVocê não inseriu um valor válido!\n\n");					
 				}
 			}
 			
