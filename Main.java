@@ -1,10 +1,6 @@
-package AndersonDaSilvaCossulJoyceCazanoskiGomesTrabGA;
+package JoiceAndersonTrabGA;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
@@ -37,6 +33,18 @@ public class Main {
 					provas.get(i).inserirPiloto(piloto);//coloca cada piloto do array nesse objeto provas criado agora
 				}
 			}
+			
+			 
+			int op = escolha();
+			switch(op){
+				case 1:
+					temp2013.ordenaPorNome();
+					
+				case 2:
+					temp2013.ordenaPorPts();
+			}
+			
+			temp2013.registraArquivo();
 			
 			apresentarCampeoes(temp2013);
 		
@@ -76,6 +84,18 @@ public class Main {
 		
 		in.close();	
 		return pilotos;
+	}
+	
+	public static int escolha() throws IOException{
+		InputStream in = System.in;
+		InputStreamReader is = new InputStreamReader (in);
+		BufferedReader console = new BufferedReader (is);
+		
+		System.out.print ("Escolha o método para ordenar:\n (digite o número correspondente) \n (1) Por nome \n (2) Por pontos ");
+		int op = Integer.parseInt(console.readLine());
+		
+		return op;
+		
 	}
 	
 	public static void apresentarCampeoes(Temporada2013 temp2013) {
