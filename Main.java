@@ -34,16 +34,25 @@ public class Main {
 				}
 			}
 			
-			 
-			int op = escolha();
-			switch(op){
-				case 1:
-					if(temp2013.pilotos != null)
-						temp2013.ordenaPorNome();
-					break;
+		 	boolean opcaoValida = false;
+
+			while(opcaoValida == false) {
+				int op = escolha();
+				switch(op){
+					case 1:
+						if(temp2013.pilotos != null)
+							temp2013.ordenaPorNome();
+						opcaoValida = true;
+						break;
 					
-				case 2:
-					temp2013.ordenaPorPts();
+					case 2:
+						temp2013.ordenaPorPts();
+						opcaoValida = true;
+						break;
+						
+					default:
+						System.err.println("Você não inseriu um valor válido!\n");					
+				}
 			}
 			
 			temp2013.registraArquivo();
@@ -52,7 +61,7 @@ public class Main {
 		
 		} catch(FileNotFoundException e) {
 			JOptionPane.showMessageDialog(null, 
-						     "Arquivo " + e.getMessage() + " não encontrado!",
+						     "Arquivo " + e.getMessage() + " nÃ£o encontrado!",
 					             "ERRO",
 						     JOptionPane.ERROR_MESSAGE);
 						
@@ -81,7 +90,7 @@ public class Main {
 			pontos = Integer.parseInt(result[6]);
 			Piloto p = new Piloto(result[0],result[1],result[2],result[3],result[4],result[5],pontos);
 			pilotos[last++] = p;
-			temp2013.inserePilotosPont(p); //dentro da classe Temporada2013 ele só vai ser inserido se tem pts
+			temp2013.inserePilotosPont(p); //dentro da classe Temporada2013 ele sÃ³ vai ser inserido se tem pts
 		}
 		
 		in.close();	
@@ -93,7 +102,7 @@ public class Main {
 		InputStreamReader is = new InputStreamReader (in);
 		BufferedReader console = new BufferedReader (is);
 		
-		System.out.print ("Escolha o m�todo para ordenar:\n (digite o n�mero correspondente) \n (1) Por nome \n (2) Por pontos ");
+		System.out.print ("Escolha o método para ordenar:\n (digite o número correspondente) \n (1) Por nome \n (2) Por pontos ");
 		int op = Integer.parseInt(console.readLine());
 		
 		return op;
